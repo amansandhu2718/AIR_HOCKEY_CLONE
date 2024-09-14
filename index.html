@@ -41,7 +41,15 @@
   <link rel="icon" href="favicon.8de18.ico"/>
 </head>
 <body>
-  <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+  <!-- <button onclick="ExitGame()" style="position: absolute;top: 0;left: 0;z-index: 99999;width: 100px;background-color: #74cd4c;">Click me</button> -->
+  <div style="position: absolute;top: 0;left: 0;z-index: 99999;display: flex; justify-content: center; align-items: flex-start; height: 100vh;width: 100vw;">
+    <button onclick="ExitGame()" style="background-color: #4CAF50; color: white; border: none; padding: 2vw 5vw; font-size: 2vw; border-radius: 5px; cursor: pointer; margin-top: 2vh;">
+      Exit Game
+    </button>
+  </div>
+  <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0">
+    
+  </canvas>
   <div id="splash">
     <div class="progress-bar stripes">
       <span style="width: 0%"></span>
@@ -53,6 +61,10 @@
 <script src="main.2984c.js" charset="utf-8"></script>
 
 <script type="text/javascript">
+  function ExitGame(){
+    history.back()
+    // window.location.replace("https://www.google.com")
+  }
 (function () {
     // open web debugger console
     if (typeof VConsole !== 'undefined') {
